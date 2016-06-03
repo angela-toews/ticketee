@@ -9,6 +9,7 @@ before_action :set_ticket, only: [:show, :edit, :update, :destroy]
 
   def create
     @ticket = @project.tickets.build(ticket_params)
+    @ticket.author = current_user
 
     if @ticket.save
       flash[:notice] = "Ticket has been created."

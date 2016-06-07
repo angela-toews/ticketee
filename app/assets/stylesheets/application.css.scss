@@ -3,6 +3,7 @@
 @import "font-awesome";
 @import "projects";
 @import "tickets";
+@import "admin/application";
 @import "responsive";
 
 header {
@@ -69,3 +70,4 @@ a.delete {
 .alert-alert {
   @extend .alert-danger;
 }
+

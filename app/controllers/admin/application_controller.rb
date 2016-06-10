@@ -1,5 +1,4 @@
 class Admin::ApplicationController < ApplicationController
-  include Pundit 
   before_action :authorize_admin!
 
   def index

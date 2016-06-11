@@ -21,6 +21,7 @@ before_action :set_ticket, only: [:show, :edit, :update, :destroy]
   end
 
   def show
+    authorize @ticket, :show?
   end
 
   def edit

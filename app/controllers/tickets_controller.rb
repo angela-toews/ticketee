@@ -43,7 +43,10 @@ before_action :set_ticket, only: [:show, :edit, :update, :destroy]
   end
 
   def destroy
+    authorize @ticket, :destroy?
+    
     @ticket.destroy
+
     flash[:notice] = "Ticket has been deleted."
 
     redirect_to @project

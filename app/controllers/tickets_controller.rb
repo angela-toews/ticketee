@@ -55,7 +55,7 @@ before_action :set_ticket, only: [:show, :edit, :update, :destroy]
   private
 
   def ticket_params
-    params.require(:ticket).permit(:name, :description)
+    params.require(:ticket).permit(:name, :description, :attachment)
   end
 
 private

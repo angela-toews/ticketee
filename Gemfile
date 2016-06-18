@@ -19,6 +19,8 @@ gem "simple_form", "~> 3.1.0"
 gem "devise", "~> 3.4.1"
 gem "pundit", "~> 0.3.0"
 
+gem "carrierwave", "~> 0.10.0"
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks

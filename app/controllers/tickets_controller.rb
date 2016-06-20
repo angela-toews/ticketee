@@ -6,6 +6,7 @@ before_action :set_ticket, only: [:show, :edit, :update, :destroy]
   def new
     @ticket = @project.tickets.build
     authorize @ticket, :create?
+    3.times { @ticket.attachments.build }
   end
 
   def create
@@ -55,15 +56,13 @@ before_action :set_ticket, only: [:show, :edit, :update, :destroy]
   private
 
   def ticket_params
-    params.require(:ticket).permit(:name, :description, :attachment, :attachment_cache)
+    params.require(:ticket).permit(:name, :description,
+      attachments_attributes: [:file, :file_cache])  
   end
-
-private
 
   def set_project
     @project = Project.find(params[:project_id])
   end
-
 
   def set_ticket
     @ticket = @project.tickets.find(params[:id])

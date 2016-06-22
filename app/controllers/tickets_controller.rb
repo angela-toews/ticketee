@@ -6,7 +6,7 @@ before_action :set_ticket, only: [:show, :edit, :update, :destroy]
   def new
     @ticket = @project.tickets.build
     authorize @ticket, :create?
-    3.times { @ticket.attachments.build }
+    @ticket.attachments.build
   end
 
   def create

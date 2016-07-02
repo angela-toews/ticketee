@@ -6,7 +6,6 @@ class Comment < ActiveRecord::Base
   scope :persisted, lambda { where.not(id: nil) }
 
   validates :text, presence: true
-  delegate :project, to: :ticket
 
   before_create :set_previous_state
   after_create :set_ticket_state
@@ -21,4 +20,6 @@ class Comment < ActiveRecord::Base
     ticket.state = state
     ticket.save!
   end
+
+  delegate :project, to: :ticket
 end

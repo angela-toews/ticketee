@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+ruby "2.3.0"
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -6,6 +7,8 @@ gem 'rails', '4.2.6'
 
 gem "postgresql", group: [:development, :test]
 gem 'pg',         group:  :production
+gem "rails_12factor", group: :production
+gem "puma",       group: :production
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -21,7 +24,6 @@ gem "devise", "~> 3.4.1"
 gem "pundit", "~> 0.3.0"
 gem "searcher", github: "radar/searcher"
 gem "fog", "~> 1.29.0"
-gem "rails_12factor", group: :production
 
 gem "carrierwave", "~> 0.10.0"
 

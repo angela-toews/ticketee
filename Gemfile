@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
 ruby "2.3.0"
 
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
 
@@ -24,7 +23,7 @@ gem "devise", "~> 3.4.1"
 gem "pundit", "~> 0.3.0"
 gem "searcher", github: "radar/searcher"
 gem "fog", "~> 1.29.0"
-
+gem 'net-ssh'
 gem "carrierwave", "~> 0.10.0"
 
 # Use jquery as the JavaScript library

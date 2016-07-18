@@ -4,10 +4,9 @@ ruby "2.3.0"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
 
-gem "postgresql", group: [:development, :test]
-gem 'pg',         group:  :production
-gem "rails_12factor", group: :production
-gem "puma",       group: :production
+gem 'pg'
+gem "rails_12factor"
+gem "puma"
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets

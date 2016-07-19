@@ -24,6 +24,7 @@ gem "searcher", github: "radar/searcher"
 gem "fog", "~> 1.29.0"
 gem 'net-ssh'
 gem "carrierwave", "~> 0.10.0"
+gem "active_model_serializers", "~> 0.9.3"
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

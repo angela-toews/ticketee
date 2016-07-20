@@ -1,4 +1,5 @@
 class ApplicationController < ActionController::Base
+  before_action :authenticate_user
   include Pundit
 
   after_action :verify_authorized, except: [:index],
@@ -17,6 +18,12 @@ class ApplicationController < ActionController::Base
     redirect_to root_path, alert: "You aren't allowed to do that."
   end
 
+  def authenticate_user
+    authenticate_with_http_token do |token|
+      @current_user = User.find_by(api_key: token)
+    end
+  end
+  
   def new
   end
 end
